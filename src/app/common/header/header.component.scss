@@ -1,0 +1,36 @@
+@import "mixin";
+.navbar{
+    z-index: 50%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @include textcolour;
+    img{
+        width: 60%;
+        height: 60%;
+    }
+    .nav-link{
+        color: white;
+    }
+
+    .navbar-text{
+        right: 2;
+    }
+    background: rgb(2,0,36);
+background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,121,116,0.5634628851540616) 71%, rgba(0,212,255,1) 100%);
+
+ul{
+    margin-right: 50%
+}
+button{
+    margin-right: 0;
+}
+
+}
+.navbar-text,button{
+    @include textcolour;
+}
+
+.navigation{
+height: 60px;
+}

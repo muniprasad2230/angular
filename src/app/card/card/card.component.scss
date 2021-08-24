@@ -1,0 +1,49 @@
+p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+  }
+  .card{
+      padding: 10%;
+      width: 80%;
+      border-radius: 0%;
+      background-color: transparent;
+      border: 0;
+      img{
+        width: 100%;
+        border-radius: 50%;
+      }
+  }
+
+ .categories{
+   margin-top: 10%;
+   text-align: center;
+   width: 20;
+   padding: 2rem;
+   justify-content: space-around;
+   position: sticky;
+   position: sticky;
+   top: 50px;
+   z-index: +10;
+   
+    a{
+    text-decoration: auto;
+    color: #fff;
+    padding: 10px;
+    background-color: yellowgreen;
+    border-radius: 5%;
+
+
+   }
+   
+ }
+ card-body{
+   padding: 2%;
+ }
+ .row{
+   margin: 0;
+   background-image: url(./../../../assets/bcg.jpg);
+  color: #fff;
+ }
+
