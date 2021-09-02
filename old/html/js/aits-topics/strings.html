@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings - JS</title>
+</head>
+<body>
+
+<script>
+	/*
+		Strings - Groupd of Characters or sequence of characters
+
+		Ways to Create - 
+
+			- String Constructor
+			- String Literal
+	*/
+
+	/* Example for String constructors */
+
+	var product_name = new String('MacboOk Air  Macbook Pro                ');
+
+
+	/* Example for String Literal */
+
+	let price  = '$100';
+
+	/* String Operation */
+
+	/* How to find no of characters in a string */
+	console.log(product_name.length);
+
+	/* String Methods 
+		- indexOf() - Finding first occurance of a given character or word
+		- lastIndexOf() - Finding last occurance of a given character or word
+		- charAt() -  Returns character at specified index
+		- charCodeAt() - Returns ASCII code of specific index 
+		- substr - Extracting a portion of a string
+		- subString - Extracting a portion of a string
+		- split() - Dividing string into multiple parts as per delimeter/ Converting string into array.
+		- search() - 
+		- replace() - 
+		- concat() - 
+		- toLowerCase() - 
+		- toUppercase() -
+		- trim()
+
+	*/
+
+	console.log('Example for indexOf():- ');
+	console.log(product_name.indexOf('Macbook'));
+	console.log('Example for charAt():- ');
+	console.log(product_name.charAt(5));
+	console.log('Example for charCodeAt():- ');
+	console.log(product_name.charCodeAt(5));
+
+	/* Example for split() */
+
+	let user_resume = 'achieversit.xlx';
+	console.log(user_resume);
+	let resume_extention = user_resume.split('.')
+	console.log(resume_extention);
+
+	if(resume_extention[1]=='doc' || resume_extention[1]=='docx' || resume_extention[1]=='pdf'){
+		console.log('we can allow user to upload a document');
+	}else{
+		console.log('we can\'t allow user to upload a document');
+	}
+
+
+	/* Task 
+		1) Create a string with 250 characters and repeat India word multiple time and identify how many time india repeated?
+
+		2) Diff b/w substr() and subString()?
+
+		3) Diff b/w  indexOf() & search()?
+
+	*/
+</script>
+</body>
+</html>

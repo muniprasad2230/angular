@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Storage Techniques - JS</title>
+</head>
+<body>
+
+<script>
+	/*
+		Storage - To keep some information that can be used to construct your application
+
+		Ways to Store data - 
+
+			- Strings - Sequence of characters
+			- Arrays - Continuous memory allocation of same type or diff type
+			- Object - Continuous memmory alocation of data in the form key, value pair
+			- ArrayOfObjects - Combination of array and Object
+	*/
+
+	/* Example for String */
+
+	let course_name  = 'ReactJS Development Training';
+
+	/* Example for Array */
+
+	let courses = ['UI','ReactJS','Angular','MEAN','MERN'];
+
+	/* Example for Object */
+
+	let course_details = {
+		name: 'Ui Development',
+		duration: '3 Months',
+		mode: 'offline/online'
+	}
+
+	/* Array of Object */
+
+	let complete_courses = [
+		{
+			name: 'Ui Development',
+			duration: '3 Months',
+			mode: 'offline/online'
+		},
+		{
+			name: 'ReactJS Development',
+			duration: '3 Months',
+			mode: 'offline/online'
+		},
+		{
+			name: 'Angular Development',
+			duration: '3 Months',
+			mode: 'offline/online'
+		},
+		{
+			name: 'VUEJS Development',
+			duration: '3 Months',
+			mode: 'offline/online'
+		}
+	];
+
+	// Retrival of data
+
+	alert(course_name);
+
+	alert(courses[0]);
+
+	alert(course_details.name);
+
+	alert(complete_courses[1].name);
+
+
+</script>
+</body>
+</html>

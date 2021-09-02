@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>India Covid-19</title>
+    <style>
+      .container{
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .container div{
+        flex: 1;
+      }
+    </style>
+    <script>
+      //https://covidtracking.com/api/us
+      const getCovidStats = async() => {
+        try {
+          const response = await fetch(' https://api.covid19india.org/state_district_wise.json');
+          const covid19 = await response.json();
+          localStorage.setItem('covidData',JSON.stringify(covid19))  
+          console.log(covid19);
+          var states = '<select onChange="stateData(this.value)">';
+          for(let state in covid19){
+              states +=`<option value="${state}" ">${state}</option>`;
+            //console.log(covid19[state]);
+
+            
+          }
+          states +='</select>';
+          document.getElementById('states').innerHTML = states;
+
+        }
+        catch (err) {
+          console.log(`Error: ${err}`);
+        }
+      };
+
+      function stateData(state){
+
+        let covidData = localStorage.getItem('covidData');
+        let covidDataStateWise = JSON.parse(covidData);
+        localStorage.setItem('state',state);
+        var dt = '<select onChange="districtData(this.value)">';
+        for(let district in covidDataStateWise[state].districtData){
+            dt +=`<option value="${district}">${district}</option>`;
+        }
+        dt +='</select>';
+
+        document.getElementById('district').innerHTML = dt;
+
+      }
+      function districtData(dt){
+        var state = localStorage.getItem('state');
+        let covidData = localStorage.getItem('covidData');
+        let covidDataStateWise = JSON.parse(covidData);
+        let finalData = covidDataStateWise[state].districtData[dt];
+
+        let tableData = `<table class="table table-striped table-bordered table-hover">
+              <tr class="active">
+                  <th> Active </th>
+                  <th> Confirmed </th>
+                  <th> Deceased </th>
+                  <th> Recovered </th>
+                  <th> Notes </th>
+              </tr>
+              <tr>
+                  <td>${finalData.active}</td>
+                  <td>${finalData.confirmed}</td>
+                  <td>${finalData.deceased}</td>
+                  <td>${finalData.recovered}</td>
+                  <td>${finalData.notes}</td>                  
+              </tr>
+            </table>;
+        `;
+        document.getElementById('result').innerHTML = tableData;
+
+      }
+      getCovidStats();
+    </script>
+  </head>
+  <body>
+    <section class="container">
+      <div id="states"></div>
+      <div id="district"></div>
+    </section> 
+    <section class="container" id="result"></section>     
+  </body>
+</html>

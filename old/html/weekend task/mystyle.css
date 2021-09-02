@@ -1,0 +1,210 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css";
+@import "font-awesome.min.css";
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0% 3% 0% 3% ;
+    border: 0%;
+    padding: 0%;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    align-items: center;
+    
+
+}
+.top-full-image{
+    background-image: url("pexels-photo-1831234.jpeg");
+    background-position: fixed;
+    height: 400px;
+    position: relative;
+    margin-top: 3%;
+}
+
+.top-full-image>h1{
+    display: inline-flex;
+    width: 40%;
+    text-align: center;
+    margin: 10% 0.5% 0% 2%;
+    position: absolute;
+
+
+}
+.top-full-image>p{
+    display: inline-flex;
+    width: 30%;
+    text-align: center;
+    margin: 13% 0.5% 0% 2%;
+    position: absolute;
+
+}
+.top-full-image>img{
+    /* display: inline-flex; */
+    width: 17%;
+    margin:  7% 0% 0% 60%;
+    position: absolute; 
+    border-radius: 50%;
+}
+.top-full-image>button{
+    margin: 22% 0% 0% 8%;
+    position:absolute;
+    padding: 6px;
+    background-color: yellow;
+    
+}
+
+.four-pics-top-text{  
+    padding: 4%;
+    text-align: center;
+    font-size: 2rem;
+}
+.first-four-img{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.top-four-pics{
+    width: 22%;
+    height: 50vh;
+    margin-top: 3%;
+}
+.top-four-one:active{
+    width: 30%;
+    height: 60vh;  
+    margin-top: 0%;  
+}
+.trending{
+    text-align: center;
+    padding: 2%;
+}
+.trending-one{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.small-pics{
+    width: 18%;
+    height: 150px;
+    margin: 2%;
+
+}
+.insta{
+    text-align: center;
+    margin-top: 40px;
+}
+.inst{
+    text-align: center;
+}
+
+.page-last-pics{
+    width: 18%;
+    height: 200px;
+}
+
+
+.third-four-img{
+    display: flex;
+}
+
+footer{
+   background-color:  black;
+}
+.main-footer{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    color: white; 
+       
+}
+li{
+    list-style: none;
+    padding: 2px;
+}
+
+footer>div{
+    margin-top: 2%;
+
+}
+.top-icons{
+    margin-left: 10%; 
+    color: white;
+    padding: 10px;
+}
+.top-icons>i{
+    font-size: 2rem;
+    padding: 10px;
+     border-radius: 50%;
+    display: inline-block;
+    color: blanchedalmond;
+}
+.rights{
+    text-align: center;
+    color: white;
+    margin-left: 10%;
+}
+
+
+   /* home page css end here */
+
+
+   /* jalabiya apge css starts here */
+
+ .main-container{
+    display: grid;
+    margin-top: 5%;
+    grid: auto / 25% auto;
+} 
+.side-bar{
+    height: 100%;
+}
+
+.filter{
+    margin-top: 2%;
+}
+.categories-item{
+    font-size: 20px;
+    padding: 15px;
+}
+
+.price-top{
+    margin-top: 25%;
+}
+
+.PRICE{
+    font-size: 25px;
+    max-width: 25%;
+    border-bottom: solid gold;
+    padding: 15px;
+    margin: 1%;
+
+}
+
+.pics-section{
+    min-width: 70%;
+    justify-content: space-evenly;
+    display: flex;
+}
+.img{
+    min-width: 22%;
+    height: 55vh;
+    
+}
+.pics-bottum{
+    display: flex;
+    justify-content: space-between;
+}
+.main-footer{
+    background-color: black;
+    margin-top: 2%;
+}
+  
+/* jalabiya apge css ends here */

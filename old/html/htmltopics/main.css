@@ -1,0 +1,64 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css";
+@import "font-awesome.min.css";
+* {
+    font-family: "myfont-1";
+}
+
+@font-face {
+    src: url(AkayaTelivigala-Regular.ttf);
+    font-family: "myfont-1";
+}
+
+.parent,
+.child {
+    border: 1px solid red;
+    margin: 10px;
+    padding: 15px;
+}
+
+.static {
+    width: 150px;
+    bottom: 50px;
+    background: chartreuse;
+}
+
+.relative {
+    position: relative;
+    width: 150px;
+    bottom: 25px;
+    background: red;
+}
+
+.fixed {
+    position: fixed;
+    background: blue;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.absolute {
+    position: absolute;
+    /* background: cyan;*/
+    /* background-color: cyan; */
+    background-image: url(banner1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 250px;
+    /* background-attachment: fixed; */
+    background-position: top;
+    top: 50ox;
+    left: 0;
+    right: 0;
+}
+
+.sticky {
+    position: sticky;
+    background: orangered;
+    top: 0px;
+}
+
+.fa {
+    color: #fff;
+    font-size: 75px;
+}

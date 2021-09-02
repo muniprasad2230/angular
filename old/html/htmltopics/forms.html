@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms - HTML</title>
+</head>
+<body>
+<!-- Form and form controls -->
+<!-- 
+ Forms - forms are majorly used to collect the information from the website user, that information can be used further.
+
+ How are we going to create a form?
+ 	- We can create any form using the form controls. The below list contains diffrent form controls that can  be used to create any kind of form.
+ -->
+ <!--  Different kind of form controls  
+		=> text - which generates textbox where in user will be able to fill any kind of data
+		=> password - which generates textbox where in user will be able to fill any kind of data but the data wont be visible to the user.
+		=> hidden - Which generates textbox that will not visible
+		=> file - which generates browse control where in user will be able to select any file from his local computer.
+		=> radio - which allows user to select any one option
+		=> checkbox - which allows user to select single or multiple options
+		=> select with options - which allows user to select single or multiple values from dropdown.
+		=> Textarea - which generates multiline textbox
+
+		form action items
+
+		=> submit - which allows user to submit a form
+		=> button - which looks like a button but which will allow user to submit a form.
+		=> reset - which allows user to reset form to default values
+ -->
+
+ <!-- Note - All the form control must be placed inside form element -->
+
+ <form method="POST" action="#" enctype="multipart/form-data">
+
+ 	<label for="user">Username</label>
+ 	<input type="text" name="username" id="user">
+
+ 	<label for="pwd">Password</label>
+ 	<input type="password" name="pwd" id="pwd">
+
+	 <label for="card" > creditcardnumber</label>
+ 	<input type="hidden" name="creditcardnumber" value="223232323232" id="card">
+
+	 <label for="pf" > pf</label>
+ 	<input type="file" name="profilepic" id="pf">
+
+	 <label for="male" > male</label>
+ 	<input type="radio" name="gender" value="male" id="male">
+
+	 <label for="female" > female</label>
+ 	<input type="radio" name="gender" value="female" id="female" >
+
+	 <label  > HTML</label>
+ 	<input type="checkbox" name="skills" value="html">
+
+	 <label  >css </label>
+ 	<input type="checkbox" name="skills" value="css">
+
+	 <label  > js</label>
+ 	<input type="checkbox" name="skills" value="js">
+
+	 <label  > jquery</label>
+ 	<input type="checkbox" name="skills" value="jquery">
+	 
+	 <label for="country" >selectcountry </label>
+ 	<select name="country" id="country">
+ 		<option value="">...select...</option>
+ 		<option value="in">India</option>
+ 		<option value="usa">USA</option>
+ 		<option value="uk">UK</option>
+ 		<option value="aus">Australia</option>
+ 	</select>
+	 <label  > ADDRESS</label>
+ 	<textarea name="address"></textarea>
+	 
+ 	<input type="submit" name="submit">
+ </form>
+
+ <!--  Tasks 
+
+	1) What is the diff between method GET & POST ?
+	2) List out the attributes of form tag?
+	3) List out the attributes of form elements?
+	4) Write a program to generate logon form?
+	5) write a program to create facebook registration form?
+	6) What is use of forms in application development?
+  -->
+</body>
+</html>

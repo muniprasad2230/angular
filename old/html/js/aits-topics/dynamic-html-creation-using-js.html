@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic HTML Creation - JS</title>
+	<style>
+		section{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		section figure{
+			flex: 1;
+			margin: 0 10px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+<!--<section>
+	 <figure>
+		<img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="Ui Development">
+		<figcaption>lopment</figcaption>
+		<figcaption>Userinterface develoment program</figcaption>
+		<figcaption>Actual Price: 25000</figcaption>
+		<figcaption>Discounted Price: 20000</figcaption>
+	</figure>
+	<figure>
+		<img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="Ui Development">
+		<figcaption>lopment</figcaption>
+		<figcaption>Userinterface develoment program</figcaption>
+		<figcaption>Actual Price: 25000</figcaption>
+		<figcaption>Discounted Price: 20000</figcaption>
+	</figure>
+	<figure>
+		<img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="Ui Development">
+		<figcaption>lopment</figcaption>
+		<figcaption>Userinterface develoment program</figcaption>
+		<figcaption>Actual Price: 25000</figcaption>
+		<figcaption>Discounted Price: 20000</figcaption>
+	</figure>
+	<figure>
+		<img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="Ui Development">
+		<figcaption>lopment</figcaption>
+		<figcaption>Userinterface develoment program</figcaption>
+		<figcaption>Actual Price: 25000</figcaption>
+		<figcaption>Discounted Price: 20000</figcaption>
+	</figure>
+</section> -->
+<script>
+	/*Sample data */
+
+	let products = [
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		},
+		{
+			imageUrl:'https://www.achieversit.com/assets/images/AIT-white.jpg',
+			title: 'UI Development',
+			description: 'Userinterface develoment program',
+			actual_price: 25000,
+			discounted_price: 20000
+		}
+	];
+
+// approach 1
+// var dynamicCards = '<section>';
+// // To read data from array of object
+// for(var i=0;i<products.length;i++){
+// 	dynamicCards +='<figure>';
+// 	dynamicCards +='<img src="'+products[i].imageUrl+'" alt="'+products[i].title+'"/>';
+// 	dynamicCards +='<figcaption>'+products[i].title+'</figcaption>';
+// 	dynamicCards +='<figcaption>'+products[i].description+'</figcaption>';
+// 	dynamicCards +='<figcaption>'+products[i].actual_price+'</figcaption>';
+// 	dynamicCards +='<figcaption>'+products[i].discounted_price+'</figcaption>';
+// 	dynamicCards +='</figure>';
+// }
+// dynamicCards += '</section>';
+
+// appraoch 2
+
+var dynamicCards = `<section>`;
+for(var i=0;i<products.length;i++){
+	dynamicCards += `<figure>
+						<img src="${products[i].imageUrl}" alt="${products[i].title}">
+						<figcaption>${products[i].title}</figcaption>
+						<figcaption>${products[i].description}</figcaption>
+						<figcaption>Actual Price: ${products[i].actual_price}</figcaption>
+						<figcaption>Discounted Price: ${products[i].discounted_price}</figcaption>
+					</figure>`
+}
+
+dynamicCards+="</section>";
+
+document.write(dynamicCards);
+
+/* Approach 3  - DOM Mehtods */
+var parentEle = document.createElement('section');
+
+var figureEle = document.createElement('figure');
+var imgEle = document.createElement('img');
+    imgEle.setAttribute('src','https://www.achieversit.com/assets/images/AIT-white.jpg');
+    imgEle.setAttribute('alt','Ui Development');
+var figCapEle1 = document.createElement('figcaption');
+var figcaptxt1 = document.createTextNode('UI Development');
+figCapEle1.appendChild(figcaptxt1);
+var figCapEle2 = document.createElement('figcaption');
+var figcaptxt2 = document.createTextNode('Userinterface develoment program');
+figCapEle2.appendChild(figcaptxt2);
+var figCapEle3 = document.createElement('figcaption');
+var figcaptxt3 = document.createTextNode('Actual Price: 25000');
+figCapEle3.appendChild(figcaptxt3);
+var figCapEle4 = document.createElement('figcaption');
+var figcaptxt4 = document.createTextNode('Discounted Price: 20000');
+figCapEle4.appendChild(figcaptxt4);
+
+figureEle.appendChild(imgEle);
+figureEle.appendChild(figCapEle1);
+figureEle.appendChild(figCapEle2);
+figureEle.appendChild(figCapEle3);
+figureEle.appendChild(figCapEle4);
+
+parentEle.appendChild(figureEle);
+
+console.log(parentEle);
+</script>
+</body>
+</html>

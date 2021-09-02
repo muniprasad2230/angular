@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        display: flex;
+        margin-top: 5%;
+        height: 10%;
+        width: 100%;
+        background-color: black;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+      }
+      .box {
+        height: 100%;
+        color: white;
+        font-size: 1em;
+        padding: 1rem;
+        transition: padding box-shadow 0.5s ease-in-out;
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: royalblue;
+      }
+      .green {
+        background-color: green;
+      }
+      .black {
+        background-color: black;
+      }
+      .gray {
+        background-color: gray;
+      }
+
+      .box:hover {
+          padding: 1.5rem;
+        -webkit-box-shadow: 6px 7px 31px -13px rgba(112, 85, 112, 1);
+        -moz-box-shadow: 6px 7px 31px -13px rgba(112, 85, 112, 1);
+        box-shadow: 6px 7px 31px -13px rgba(112, 85, 112, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="box red">Lorem ipsum dolor sit amet</div>
+      <div class="box blue">Lorem ipsum dolor sit amet</div>
+      <div class="box green">Lorem, ipsum dolor sit amet</div>
+      <div class="box black">Lorem ipsum dolor sit amet</div>
+      <div class="box gray">Lorem ipsum dolor sit amet</div>
+    </div>
+  </body>
+</html>

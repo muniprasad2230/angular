@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="covid.js"></script>
+    <style>
+        body{
+            text-align: center;
+        }
+
+    table, tr,th{
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+<body>
+    
+    <select name="statedropdown" id="statedropdown"></select>  <br><br>
+    <select name="distdropdown" id="distdropdown"></select> 
+    <table id="maintable">
+        <tr>
+            <th>Active</th>
+            <th>confirmed</th>
+            <th>migratedother</th>
+            <th>deceased</th>
+            <th>recovered</th>
+        </tr>
+    </table>
+    
+
+    </select>
+    <script>
+
+        var getcovid_data = async () => {
+            var states = []
+            var allData = await fetch('https://api.covid19india.org/state_district_wise.json')
+            allData = await allData.json()
+            localStorage.setItem('coviddata',JSON.stringify(allData))
+            for (let state in allData) {
+                states.push(state)
+            }
+            localStorage.setItem('states',JSON.stringify(states))
+            
+            var selectOption =  document.getElementById('statedropdown')
+            var options = ''
+            for (var i = 1;i<states.length; i++) {
+                options += "<Option onClick=getDistricts("+i+")>"+ states[i] +"</Option>"
+            }
+            selectOption.innerHTML = options
+        }
+
+        var getDistricts = (id) => {
+            var allData = JSON.parse(localStorage.getItem('coviddata'))
+            var stateData = JSON.parse(localStorage.getItem('states'))
+            var state = stateData[id]
+            console.log(state)
+            var districts = allData[state]['districtData']
+
+            var districtData = ''
+            for( var district in districts){
+                districtData += `<option onClick=getInfo("${district}","${state}")> ${district} </option>`
+                console.log(districtData)
+            }
+            document.getElementById('distdropdown').innerHTML = districtData
+        }
+
+        var getInfo = (district,state) => {
+            var allData = JSON.parse(localStorage.getItem('coviddata'))
+            var districtInfo = allData[state]['districtData'][district]
+            console.log(districtInfo)
+        }
+        
+        
+        getcovid_data()
+        getInfo()
+
+        </script>
+        
+</body>
+</html>

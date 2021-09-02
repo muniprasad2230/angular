@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reviews</title>
+    <style>
+        body{
+           margin: 40% 40%; 
+        }
+        .card{
+            background-color: aquamarine;
+        }
+        .img{
+            width: 12rem;
+            height:12rem;
+            border-radius: 50%;
+            margin: 3rem 3.5rem;
+        }
+        .card-body{
+            text-align: center;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="card" style="width: 20rem;">
+            <div  class ="card-body">
+          <img class="img" src="./img/Screenshot (1).png" alt="">
+          <h5 class = "name">Card title</h5>
+          <h5 class =" job">Card title</h5>
+          <p  class =" text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <span><button class =" back" >back</button></span>
+          <span><button class =" front" >front</button></span>
+          <h4><span><button class =" random">random</button></span></h4>         
+        </div>
+      </div>
+
+
+      <script> 
+
+ const reviews = [
+    
+          {
+        
+                  name:"kirun",
+                  job:"free",
+                  Img: "",
+                  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sed, illo culpa illum optio dignissimos, neque nisi consequuntur omnis qui laboriosam accusamus commodi vero maiores nobis est deleniti facilis odio."  ,
+           },
+            {
+            
+                  name:"yesh",
+                  job:"friend",
+                  Img: "/jj(1).jfif",
+                  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sed, illo culpa illum optio dignissimos, neque nisi consequuntur omnis qui laboriosam accusamus commodi vero maiores nobis est deleniti facilis odio."  ,
+           },
+            {
+
+                name:"dileep",
+                job:"bike",
+                Img: "H:\angular\html\js\123\img\Screenshot (1).png",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sed, illo culpa illum optio dignissimos, neque nisi consequuntur omnis qui laboriosam accusamus commodi vero maiores nobis est deleniti facilis odio."  ,
+         },
+            {
+            
+               name:"muni",
+               job:"muin",
+               Img: "H:\angular\html\js\123\img\Screenshot (1).png",
+               text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sed, illo culpa illum optio dignissimos, neque nisi consequuntur omnis qui laboriosam accusamus commodi vero maiores nobis est deleniti facilis odio."  ,
+       }
+       ];
+
+   const img = document.querySelector(".img");
+   const author = document.querySelector(".name");
+   const job = document.querySelector(".job");
+   const info = document.querySelector(".text");
+
+   const backBtn = document.querySelector(".back");
+   const frontBtn = document.querySelector(".front");
+   const randomBtn = document.querySelector(".random");
+
+   let currentItem = 1;
+
+   window.addEventListener("DOMContentLoaded",function(){
+      showPerson(currentItem);   
+   
+   });
+           function showPerson(person){
+            const item = reviews[person];
+            img.src = item.img;
+            author.textContent = item.name;
+            job.textContent = item.job;
+            info.textContent = item.text;
+        }
+        backBtn.addEventListener("click",function(){
+            currentItem--;
+            if(currentItem < 0){
+          currentItem =  reviews.length-1;
+            }
+            showPerson(currentItem);
+        })
+        frontBtn.addEventListener("click",function(){
+            currentItem++;
+            if(currentItem> reviews.length-1){
+              currentItem = 0;
+            }
+            showPerson(currentItem);
+        })
+        
+        randomBtn.addEventListener("click", function(){
+            currentItem =  Math.floor(Math.random() * reviews.length);
+            console.log(currentItem);
+            showPerson(currentItem);
+        })
+
+
+      </script>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        table, tr,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <select name="states" id="stateDropDown"></select> <br><br>
+    <select name="districts" id="districtDropDown"></select> <hr>
+    <table id="table">
+      
+    </table>
+
+    
+
+    <script>
+
+        getAllData = async () => {
+            var stateDropDown = document.getElementById('stateDropDown')
+            var states = ''
+            var allData = await fetch('https://api.covid19india.org/state_district_wise.json')
+            var jsonData = await allData.json()
+
+            for (let state in jsonData) {
+                states += `<option value="${state}" onClick=setDistrictData(this.value)>${state}</option>`
+                localStorage.setItem(state,JSON.stringify(jsonData[state]))
+            }
+
+            stateDropDown.innerHTML = states
+
+        }
+
+        getAllData()
+
+        function setDistrictData(state) {
+            var districtDropDown = document.getElementById('districtDropDown')
+            var districtData = JSON.parse(localStorage.getItem(state))
+            var districts = ''
+            for(district in districtData['districtData']) {
+                districts += `<option value="${state}&${district}" onClick=tabledata(this.value)>${district}</option>`
+            }
+            districtDropDown.innerHTML = districts 
+            tabledata(state+"&"+Object.keys(districtData['districtData'])[0])
+        }
+
+        function tabledata(location){
+            var location = location.split('&')
+            var table = document.getElementById('table')
+            var allDistrictsinState = JSON.parse(localStorage.getItem(location[0]))
+            var tabledata = `<tr>
+                                <th>active</th>
+                                <th>migratetoother</th>
+                                <th>decreased</th>
+                                <th>confirmed</th>
+                                <th>recovered</th>
+                                <th>fucked</th>
+                            </tr>
+                            <tr>
+                                <td>${allDistrictsinState['districtData'][location[1]].active}</td>
+                                <td>${allDistrictsinState['districtData'][location[1]].confirmed}</td>
+                                <td>${allDistrictsinState['districtData'][location[1]].migratedother}</td>
+                                <td>${allDistrictsinState['districtData'][location[1]].deceased}</td>
+                                <td>${allDistrictsinState['districtData'][location[1]].recovered}</td>
+                                <td>${allDistrictsinState['districtData'][location[1]].deceased}</td>
+                            </tr>
+                            `
+                            table.innerHTML = tabledata
+                              
+            }
+
+    </script>
+
+
+
+
+</body>
+</html>

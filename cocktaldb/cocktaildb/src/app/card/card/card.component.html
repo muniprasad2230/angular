@@ -1,0 +1,20 @@
+<div class="row">
+
+<div class="col-2 categories"  *ngFor="let category of categories ">
+  <div >
+     <a href="" class="link"> {{category}}</a>
+    </div>
+</div>
+
+
+<div class="col-3  card-body " *ngFor="let drink of drinks">
+  <div class="card ">
+    <img class="card-img-top" src="{{drink.strDrinkThumb}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{drink.strDrink}}</h5>
+      <p class="card-text">{{drink.strInstructions}}</p>
+    </div>
+  </div>
+
+</div>
+</div>

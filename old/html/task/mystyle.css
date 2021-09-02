@@ -1,0 +1,231 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css";
+@import "font-awesome.min.css";
+body{
+    margin: 0.5%;
+    border: 0%;
+    padding: 0%;
+}
+
+
+.main-nav{
+ display: flex;
+text-align: center; 
+width: 100%;
+justify-content: center;
+background-color: lightgray;
+position: fixed;
+
+}
+.nav{
+   padding: 8px;
+}
+.ait{
+    margin-left: 20%;
+    background-color: white;
+    padding-top: 30px;
+}
+.ait-1{
+  margin-left: 25%;
+}
+.brownbox{
+   
+    padding: 40px;
+    background-color: #862d2d;
+
+}
+.blackbox{
+    width: 100%;
+    height: 180px ;
+    background-color: black;
+    color: white;
+   text-align: center;
+   padding-top: 20px;
+}
+.black-button{
+    padding: 10px;
+    border: 1px solid blanchedalmond;
+    background-color: black;
+    color: white;
+}
+.greenline{
+    width: 100%;
+    background-color: #66ff99;
+    padding-top: 30px;
+}
+.top-icons{
+  margin-left: 10%; 
+  color: white;
+  padding: 10px;
+}
+.fas{
+    font-size: 2rem;
+    padding: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.icon-matter{
+    text-align: center;
+    
+}
+.major-heading{
+    text-align: center;
+    
+}
+.four{
+   display: grid; 
+   grid: auto / repeat(4,auto) ;   
+   justify-content: space-around; 
+}
+
+
+.four-box{
+       
+         width: 150px;
+         height: 100px;
+         background-color: aqua;
+         margin-top: 60px;
+           
+}
+.box-head{
+    
+   color: black;  
+    font-size: small ;
+    text-align: center;
+}
+
+.four-p{
+
+   text-align: center;
+   justify-content: space-around;
+   width: 130px;
+}
+.box-button{
+    text-align: center;
+    margin-left: 25%;
+   margin-top: 20px;
+    padding: 8px;
+    background-color: lightgreen;
+    color: white;
+    font-weight: bold;
+}
+.ANOTHER-MAJOR-HEADING{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.big-heading{
+    margin-top: 60px;
+    text-align: left;
+    margin-left: 5%;
+} 
+.big-heading-box{
+    width: 85%;
+    height: 150px;
+    background-color: lightpink;
+}
+.CONTINUE-BUTTON{
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 60px ;
+     padding: 8px;
+     background-color: lightgreen;
+     color: white;
+     font-weight: bold;
+}
+.footer-top-line{
+    padding: 2px;
+    background-color:  lightslategray;
+}
+
+.footer-matter{
+    text-align: center;
+    margin-top: 50px;
+}
+.footer-touch{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.fab{
+    margin-left:15%;
+    font-size: 2rem;
+    padding: 10px;
+    background-color: #bbb;
+    border: 20%;
+    display: inline-block;
+
+
+    
+}
+.rights{
+    text-align: center;
+    margin-left:  30%;
+    margin-top: 80px;
+     padding: 8px;
+     background-color: lightslategray;
+     color: black;
+     font-weight: bold;
+}
+
+/*==================== home page css end here ===================== */
+
+
+
+.first-part{
+    display: flex;
+    justify-content: end;
+}
+.left-side-matter{
+    min-width:  20%;
+    padding: 2%;
+    
+}
+
+.right-side-matte{
+    text-align:start;
+    justify-content: end;
+
+}
+.big-colour-box{
+    width: 90%;
+    height: 40%;
+    background-color: #862d2d;
+}
+
+.secound-part{
+    display: flex;
+    justify-content: end;
+}
+.left-side{
+    min-width: 20% ;
+    padding: 2%;
+}
+.right-side{
+    padding: 0.5%;
+}
+.left-side-box{
+    min-width: 20%;
+    min-height: 20%;
+    background-color: #862d2d;
+}
+
+/* left side bar css completed */
+
+
+
+/* NO SIDE BAR STARTS */
+
+
+
+.bigbox{
+    background-color: #862d2d;
+    width: 85%;
+    height: 200px ;
+    margin-left: 7%;
+}
+.no-side-bar-matter{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+

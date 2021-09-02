@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUTS</title>
+    <style>
+    .child-a {
+            margin: 50px !important;
+        }
+        
+        .parent,
+        .child {
+            border: 1px dotted red;
+            padding: 25px;
+            margin: 25px;
+        }
+        
+        .parent {
+            /* flex: Display Property */
+            display: flex;
+            /* wrap: Wrapping Property(Deals wit the overflow) */
+            flex-wrap: wrap;
+            /* justify-content: Horizantal Alignment of items */
+            justify-content: center;
+            /* align-content: Vertical Alignment of items */
+            align-items: center;
+            min-height: 500px;
+        }
+        
+        .child-1 {
+            /* flex: 25; */
+            width: 150px;
+            height: 100px;
+        }
+        
+        .child-2 {
+            /* flex: 2; */
+            width: 200px;
+            height: 100px;
+        }
+        
+        .child-3 {
+            /* flex: 3; */
+            width: 250px;
+            height: 100px;
+        }
+        /* universal selector */
+        /* * {
+            color: lightgrey;
+            font-size: 25px;
+            border: 2px dashed red;
+            padding: 20px; */
+    }
+    /* ID Selector */
+    /* #dummy {
+            color: orangered;
+        } */
+    /* ID Selector */
+    .dummy {
+        color: orangered;
+    }
+    /* Tag selector / Element Selector */
+    h1 {
+        font-size: 25px;
+        border: 2px dashed red;
+        padding: 20px;
+    }
+    /* Descendent Selector */
+    h1.dummy {
+        font-size: 25px;
+        border: 10px dashed yellow;
+        padding: 20px;
+    }
+    /* Group Selectors */
+    .child-a,
+    h1.dummy,
+    .dummy,
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-style: italic;
+    }
+    /* child selector */
+    ul>li {
+        color: red;
+    }
+    /* adjacent sibling-selector  */
+    h1+p {
+        font-style: normal;
+        font-weight: bold;
+    }
+    /* sibling selector */
+    h1~p {
+        font-style: normal;
+        font-weight: bold;
+        background: red;
+    }
+    /* attribute selectors */
+    input[type="email"] {
+        border: 5px solid red;
+    }
+    /* Pseduo classes */
+    a:hover {
+        font-size: 50px;
+        color: orangered;
+    }
+    a:active {
+        font-size: 100px;
+        color: green;
+    }
+    a:focus,
+    input:focus {
+        font-size: 150px;
+        color: yellow;
+    }
+    ul li:nth-child(3) {
+        font-size: 10px;
+    }
+    p::first-line {
+        color: green;
+    }
+    p::first-letter {
+        color: yellow;
+        font-size: 25px;
+    }
+    /* Pseudo Elements */
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        Types of layouts in HTML5 : 1) Float 2) Flex 3) Grid 4) Table
+     -->
+    <div class="parent">
+        <div class="child child-1 child-a">CONTENT</div>
+        <div class="child child-2">CONTENT</div>
+        <div class="child child-3">CONTENT</div>
+
+
+    </div>
+    <div class="parent-1">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, esse.</p>
+        <h1 id="dummy" class="dummy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas.</h1>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas.</h1>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas.</h1>
+        <h2 id="dummy" class="dummy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas.</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas.</h3>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas.</h4>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas.</h5>
+    </div>
+
+    <!-- <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, velit.</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p> -->
+    <ul class="child-select">
+        <li>Content</li>
+        <li>Content</li>
+        <li>Content</li>
+        <li>Content</li>
+    </ul>
+    <ol class="">
+        <li>Content</li>
+        <li>Content</li>
+        <li>Content</li>
+        <li>Content</li>
+    </ol>
+
+
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, harum.</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quam!</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, harum.</p>
+
+    <input type="email">
+    <input type="text">
+    <input type="password">
+    <br><br>
+
+    <a href="">HOVER</a>
+    <a href="">Active </a>
+    <input type="email">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sit eaque repudiandae necessitatibus distinctio labore neque, unde consequatur, velit non dolorem hic, commodi recusandae modi expedita tenetur cumque debitis voluptate!</p>
+
+    <!-- 
+        Selectors in css : 1) Universal Selector : *
+     -->
+
+</body>
+
+</html>

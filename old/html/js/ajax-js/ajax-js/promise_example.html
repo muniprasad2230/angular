@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promise  - Example</title>
+</head>
+<body>
+
+
+<script>
+	//custom Promise / User defined promise
+	let myPromise = new Promise(function(myResolve, myReject) {
+// "Producing Code" (May take some time)
+	let percentage = 75;
+	if(percentage>75){
+		myResolve();
+	}else{
+		 myReject();
+	}
+});
+
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(
+  function(value) { /* code if successful */ 
+  	alert('if successful')
+  },
+  function(error) { /* code if some error */ 
+  	alert('If error');
+  }
+);
+</script>
+</body>
+</html>

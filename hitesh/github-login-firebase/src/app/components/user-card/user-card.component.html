@@ -1,0 +1,20 @@
+<div class="card-user text-primary">
+    <div class="background bg-info">
+        <img
+        class="img-fluid.rounded-circle.profile-pic.border-2.border-white"
+        [src]="user.avatar_url" alt="">
+    </div>
+
+        <div class="card-body">
+            <h5 class="card-titel">
+                {{user.name}}
+            </h5>
+            <p class="card-text">id:{{user.id}}</p>
+            <p class="card-text">public_repos:{{user.public_repos}}</p>
+            <p class="card-text">created_at:{{user.created_at}}</p>
+            <p class="card-text">updated_at:{{user.updated_at}}</p>
+
+        </div>
+
+
+</div>

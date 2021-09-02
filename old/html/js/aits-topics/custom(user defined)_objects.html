@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom / User Defined Objects - JS</title>
+</head>
+<body>
+
+<script>
+	/*
+		There are 3 ways that we can create a custom object
+
+			- Object literal
+			- Object Constructor
+			- using predefined Object
+
+			Note - * In ES5 Js there is no 'class' keyword but we can create class is also 'function' keyword. In ES6+ JS thers is class keyword.
+
+			* ES5 JS supports 'Prototypal' Inheritance where as ES6+ JS supports 'Classical' inheritance.
+	*/
+
+	/* Object literal - Example */
+
+	var institute = {
+		firstname:'AchieversIT',
+		lastname:'training institute',
+		place:'located at BTM, Bangalore',
+		details: function(){
+			return this.firstname+' '+this.lastname+' '+this.place;
+		},
+		courses: function(){
+			return "AchieversIT provides trainings on Fullstack, Ui, MERN,MEAN,DM,AWS,DevOps etc..."
+		}
+	}
+
+	// retriving props and methods
+
+	console.log(institute.firstname);//AchieversIT
+	console.log(institute.firstname);//AchieversIT
+	console.log(institute.firstname);//AchieversIT
+	console.log(institute.courses());//AchieversIT provides trainings on Fullstack, Ui, MERN,MEAN,DM,AWS,DevOps etc...
+
+	/* Object Constructor - Example */
+
+	function student(name,email,pno){
+		this.name =  name;
+		this.email =  email;
+		this.phone =  pno;
+		this.enrollment = function(){
+			return this.name+' has enrolled for Fullstack Development, his email id is '+this.email +' and his phone is '+this.phone;
+		}
+		this.details = function(){
+			return this.name+","+this.email+","+this.phone;
+		}
+	}
+
+	//retriving props as well methods
+
+	var sObj = new student('Murali','murali@gmail.com','9060888029');
+
+	console.log(sObj.name);//Murali
+	console.log(sObj.enrollment()); //Murali has enrolled for Fullstack Development, his email id is murali@gmail.com and his phone is 9060888029
+
+	var sObj1 = new student('Sachin','sachin@gmail.com','9090909090');
+	console.log(sObj1.name);//Sachin
+
+	/* Inheritance - Aquring props and members of base class into derived class */
+
+	student.prototype.gender = 'male';
+	student.prototype.enrolledFor = function(){
+		return this.name+' has enrolled for online classes';
+	}
+	student.prototype.discount = function(fees,dp=10){
+		return fees - (fees * dp / 100);
+	}
+
+	var sObj2 = new student('Dhoni','dhoni@gmail.com','8080808080');
+	console.log(sObj2.name);//Dhoni
+
+	console.log(sObj2.gender);
+
+	console.log(sObj2.discount(25000,20));
+	console.log(sObj2.discount(25000));
+
+	/* Polymorphism - An ability to make use of one form into multiple ways 
+		
+		 - Function Overloading
+		 - Operator Overloading
+	
+	*/
+
+
+
+</script>
+</body>
+</html>

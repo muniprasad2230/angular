@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="enter a number" id="value">
+    <button onclick="myfunction()">click me!</button>
+    <p id="table"></p>
+    <script>
+        function myfunction(){
+            let a = document.getElementById("value").value;
+            var table = ''
+            for(i=1;i<11;i++){
+                table += a+"*"+ i +"="+ a*i+"<br>"
+
+            }
+            document.getElementById("table").innerHTML = table
+        }
+    </script>
+</body>
+</html>

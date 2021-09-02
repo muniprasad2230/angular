@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu-filter</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .btn-conainer{
+            display: flex;
+            justify-content: center;
+        }
+        .card{
+            border : 1px solid yellow;
+            background-color: rgb(214, 214, 205);
+            font-size: large;
+            /* display: flex; */
+            text-align: center;
+        }
+           
+      
+      
+       
+        .card-img-top{
+            width: 140px;
+        }
+    </style>
+</head>
+<body>
+    <h1>our menu</h1>
+    <div class="btn-conainer">
+        <button class="button-filter" type="button" data-id="all">all</button>
+        <button class="button-filter" type="button" data-id="cycle">cycle</button>
+        <button class="button-filter" type="button" data-id="jcb">jcb</button>
+        <button class="button-filter" type="button" data-id="crane">crane</button>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/img/cycle.jfif" alt="Card image cap">
+        <div class="card-body">
+          <span class="card-title">cycle</span>
+          <span class="price">$30</span>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        
+        </div>
+      </div>
+
+      <script>
+
+ const menu = [
+     {
+     title : "cycle",
+     price : "$30",
+     img : "/img/cycle.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"cycle",
+   },
+     {
+       title : "cycle",
+       price : "$30",
+       img : "/img/cycle2.jfif",
+       disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+       Category :"cycle",
+   },
+   {
+        title : "cycle",
+        price : "$30",
+        img : "/img/cycle3.jfif",
+        disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+        Category :"cycle",
+   },
+       {
+     title : "jcb",
+     price : "$30",
+     img : "/img/jcb.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"jcb",
+       },
+     {
+     title : "jcb",
+     price : "$30",
+     img : "/img/jc2.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"jcb",
+    } ,
+    
+    {
+     title : "jcb",
+     price : "$30",
+     img : "/img/jcb3.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"jcb",
+    } ,
+    
+    {
+     title : "jcb",
+     price : "$30",
+     img : "/img/jcb4.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"jcb",
+    } ,
+    
+    {
+     title : "crane",
+     price : "$30",
+     img : "/img/crane.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"crane",
+    },
+    
+    {
+     title : "crane",
+     price : "$30",
+     img : "/img/crane3.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"crane",
+    },
+    
+    {
+     title : "crane",
+     price : "$30",
+     img : "/img/crane2.jfif",
+     disc: "loremSome quick example text to build on the card title and make up the bulk of the card's content",
+     Category :"crane",
+    } ]
+
+   const section_Main = document.querySelector(".card");
+    const filterBtn = document.querySelectorAll(".button-filter")
+   window.addEventListener("DOMContentLoaded",function(){
+ displaymenu(menu);
+});
+
+filterBtn.forEach(function(btn){
+    btn.addEventListener("click",function(e){
+     const category = (e.currentTarget.dataset.id);
+    const menucategory = menu.filter(function(menuitem){
+         if(menuitem.Category === category){
+            return menuitem;
+         }
+        
+     })
+     if(category === "all"){
+       displaymenu(menu);
+     }else{
+        displaymenu(menucategory);
+    }
+   console.log(menucategory);
+     });
+  
+});
+
+
+ 
+
+        function displaymenu(menuItems){
+       let displayItem = menuItems.map(function (item) {
+        return `
+         <div class="card" style="width: 18rem;">
+       <img class="card-img-top" src=${item.img} alt="Card image cap">
+       <div class="card-body">
+        <span class=>${item.title}</span>
+        <span class=>${item.price}</span>
+        <p class=>${item.disc}</p>
+      </div>
+        </div>`;
+    });
+    displayItem = displayItem.join("");
+    section_Main.innerHTML = displayItem;
+};
+     
+         </script>
+</body>
+</html>

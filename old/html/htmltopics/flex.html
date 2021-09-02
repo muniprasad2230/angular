@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .main-item{
+            display: flex;
+           align-items: center;
+             flex-wrap: wrap;
+            justify-content: space-between;
+            border: 2px   solid black;
+            min-height: 600px;
+            padding: 5px;
+           
+        }
+        
+        *{
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;  
+        }
+        #idselector{
+            background-color: grey;
+            border: 2px   solid red;
+            height: 50px;
+            width: 50px;
+            text-decoration: solid cornsilk;
+            flex: 15%;
+        }
+        div{
+            font-size: 15px;
+        }
+        .item{
+            flex: 15%;
+            border: 2px   solid black;
+            height: 50px;
+           min-width:  50px;
+           background-color: teal;
+        }
+
+        div.item{
+            border: solid tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-item">
+        <div id="idselector">items</div>
+        <div class="item">items</div>
+        <div class="item">items</div>
+        <div class="item">items</div>
+        <div class="item">items</div>
+        <div class="item">items</div>
+        <div class="item">items</div>
+        <div class="item">items</div>
+        <div class="item">items</div>
+        
+      
+    </div>
+    
+</body>
+</html>

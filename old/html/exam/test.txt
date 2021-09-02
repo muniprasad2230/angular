@@ -1,0 +1,97 @@
+1) What are semantic elements in HTML and mention some?
+a. header,footer,
+
+2) Write few input types with is introduced in HTML5 forms
+a. password,radio,check box,text,address,hidden,select.
+
+4) HTML Snippet
+<div class=”first__div” id=”my__div” > Hello world </div>
+Css
+<style>
+diiv{
+Color : blue;
+}
+#my__div{
+Color: orange;}
+.first__div{
+Color : red
+}
+Which color is applied to above text in div ----orange
+
+
+5) Write the difference between display: block, display: inline, and display:inline-block
+
+a. display: block---it will display element into a blocklevel element
+   
+   display: inline--it will convert and display given element into a inline element
+
+
+6) Which of the following is descendant selector ?
+a. c
+
+
+7) . Giving which property the parent element will be not get effected by the child float
+property
+
+a. float-left,float-right
+
+
+9) What are the main important tags to create a html page
+
+a.<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta viewpoint tag>
+<title>title</title>   
+<head></head>
+<body></body>
+
+10) What is difference between tag and element in HTML?
+a.  
+   html tag which open and closed with a tag and content what we wright in between tags are element
+
+11) Write the difference between inline, inline-block and block-level elements?
+a.  
+	
+13) In which version Multimedia (Video and Audio) was introduced in HTML?
+a. html 5.0
+
+14) Expand CSS
+a.caascading  style sheet
+
+16) What is difference between box-sizing : ‘content-box’ and box-sizing: border-box
+a. 
+	box-sizing : ‘content-box’---it will apply changes for the 
+
+
+17) What is difference between display : none and visibility: hidden , write one example for it
+a. 
+	display : none and visibility: it will not show any value we entered but it showes the element box
+	ex:password
+	display : hidden : it will show nuting in the html page what ever content may be it will not show
+	ex: hidden
+
+ 18) What is Box-model in CSS , explain the main components of box mode
+
+a. box-model where we check or inspect an element properties like 
+	content:
+	padding:
+	border:
+	margin:
+
+
+19) Write the difference between the static, absolute, relative, fixed and sticky positions
+a. 
+	static: it was the defualt position of any element 
+	absolute: absolute position take the absolute valuse of a page and moves to that position 
+	to make it change we have to give our parent element relative
+
+	relative: this position were give to the parent element to make child elements relative to parent 
+
+	fixed : it will fix to the position where it was there will be no movement in it
+
+	 sticky : at start it will be in its position but after scrolling when it touch top of the page it will stick there 
+
+20)  Why we use overflow property in CSS , explain with one example
+a.
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        .parent,
+        .child {
+            border: 1px solid red;
+            margin: 10px;
+            padding: 15px;
+        }
+        
+        .static {
+            width: 150px;
+            bottom: 50px;
+            background: chartreuse;
+        }
+        
+        .relative {
+            position: relative;
+            width: 150px;
+            bottom: 25px;
+            background: red;
+        }
+        
+        .fixed {
+            position: fixed;
+            background: blue;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .absolute {
+            position: absolute;
+            background: cyan;
+            top: 50ox;
+            left: 0;
+            right: 0;
+        }
+        
+        .sticky {
+            position: sticky;
+            background: orangered;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Positions : 1) static (default)
+                    2) relative
+                    3) fixed 
+                    4) absolute
+                    5) sticky
+        Position Directions : Top , Bottom , Left and Right
+     -->
+    <div class="paent">
+        <div class="child static">STATIC </div>
+        <div class="child relative">RELATIVE </div>
+        <div class="child fixed">FIXED </div>
+        <div class="child absolute">ABSOLUTE </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="child sticky">STICKY </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+</body>
+
+</html>

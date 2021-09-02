@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid Data - AJAX & JS </title>
+</head>
+<body>
+
+<button id="getdata">Get Data</button>
+
+<script>
+	// creating ajax object
+	var httpObj = new XMLHttpRequest();
+
+	//open a connection to get the data from server
+	httpObj.open('GET','https://api.covid19india.org/state_district_wise.json');
+
+	httpObj.onreadystatechange = function() {
+    //console.log(this.statusText);
+    if (this.readyState == 4 && this.status == 200) {
+      var covidData = this.responseText;
+
+      //Object.keys(covidData).
+      debugger;
+  //     for(var i=0; i<Object.keys(covidData).length;i++){
+  //     		console.log(covidData[i]);
+		// }
+
+		for (var key in covidData) {
+			console.log(key);
+		  // if (covidData.hasOwnProperty(key)) {
+		  //   var val = covidData[key];
+		  //   console.log(val);
+		  // }
+		}
+    }else{
+      //debugger;
+      alert('There is some error , please wait for sometime');
+    }
+  };
+	document.getElementById('getdata').addEventListener('click',function(){
+		httpObj.send();
+	});
+
+</script>
+</body>
+</html>

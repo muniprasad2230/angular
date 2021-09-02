@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .total{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <button id="minusBtn" onclick="bussiness('minus')">-</button>
+  <h3 id="total">0</h3>
+  <button id="plusBtn" onclick="bussiness('plus')">+</button>
+
+  <script>
+    
+    var count = 0
+    
+    function bussiness(action) {
+      var fixedprice = document.getElementById("total").innerText
+      if(action == "plus") {
+        count++
+        document.getElementById("total").innerHTML = count*fixedprice
+      } else if(action == "minus"){
+        if(count>0){
+          count--
+          document.getElementById("total").innerHTML = count*fixedprice
+        }
+      }
+    }
+
+  </script>
+  
+</body>
+</html>
